@@ -1,1 +1,7 @@
 
+//	Add your name space and key from 'custom.color_products'
+
+{% assign productdata = product.metafields.custom.color_products.value  %}
+{% for productmeta in productdata %}
+  {{ productmeta.title }}
+{% endfor %}
