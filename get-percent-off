@@ -1,0 +1,6 @@
+<div class="percent-count">
+  {% if product.compare_at_price and product.compare_at_price > product.price %}
+   {% assign discount_percentage = productcompare_at_price | minus: product.price | times: 100  %}
+    <div class="percentage">{{ discount_percentage | divided_by: product.compare_at_price }}%</div>
+  {% endif %}
+</div>
